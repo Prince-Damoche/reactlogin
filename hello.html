@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>React Intro</title>
+</head>
+<body>
+<div id="app">
+<!-- <h1>Just testing something...</h1> -->
+</div>
+<script type="text/javascript" src="react.js"></script>
+<script type="text/javascript" src="react-dom.js"></script>
+<script>
+// 1. rendering a h1 tag without any attributes
+ReactDOM.render(
+	React.DOM.div({style:
+		{
+		width: "40%",
+		border: "grey solid 2px",
+		borderRadius: "4px",
+		margin: "50px auto",
+		paddingBottom: "10px",
+	}},
+		React.DOM.h1(
+		{
+			style: {
+				backgroundColor: "black",
+				fontFamily: "roboto",
+				width: "100%",
+				margin:"0 auto",
+				color: "white",
+				textAlign: "center",
+			}
+		}, "Login"),
+		React.DOM.form(null,
+			React.DOM.input(
+				{
+					type:"text",
+					placeholder:"Username",
+					style: {
+						border: "black solid 1px",
+							margin: "10px 0px 0px 40px",
+						width: "80%",
+						height: "40px",
+						textAlign: "center",
+					},
+				}),
+			React.DOM.br(),
+				React.DOM.input(
+				{
+					type:"Password",
+					placeholder:"Password",
+					style: {
+						border: "black solid 1px",
+						margin: "10px 0px 0px 40px",
+						width: "80%",
+						height: "40px",
+						textAlign: "center",
+					},
+				}),
+				React.DOM.br(),
+				React.DOM.button(
+				{
+					
+					value:"Submit",
+					style: {
+						backgroundColor: "black",
+						
+						color: "white",
+						width: "40%",
+						border: "none",
+						height: "40px",
+						textAlign: "center",
+						margin: "10px 0px 0px 150px",
+					},
+				}, "Submit"),
+
+		), 
+	),
+	
+	document.getElementById("app")
+);
+
+</script>
+</body>
+</html>
